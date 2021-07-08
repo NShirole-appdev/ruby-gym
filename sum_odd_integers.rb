@@ -11,3 +11,19 @@
 # 16
 
 p "Enter at least 2 numbers, separated by spaces:"
+input = gets.chomp.split().map(&:to_i)
+sum = 0
+i = 0
+
+while i < input.length
+    if input[i].odd?
+    sum = sum + input[i]
+    else
+    end
+    i = i+1
+end
+p sum
+
+#wordsplit.each do |the_letter|
+   # p "#{the_letter} appears #{wordsplit.count(the_letter)} times"
+  #end
