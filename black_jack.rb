@@ -8,3 +8,21 @@
 # For example, given a 11 and 13 as input, the 11 should be 'converted' into a 1 so the total sum will be 14.
 
 p "Enter two number separated by spaces:"
+cards = gets.chomp
+twocards = cards.split()
+integer1 = twocards[0].to_i
+integer2 = twocards[1].to_i
+blackjacksum = integer1 + integer2
+iseleven = (integer1 == 11 || integer2 == 11)
+if iseleven
+    if blackjacksum < 21
+        p blackjacksum
+    else
+        converted = blackjacksum - 10
+        p converted
+    end
+elsif blackjacksum < 21
+    p blackjacksum
+else
+    p 0
+end
