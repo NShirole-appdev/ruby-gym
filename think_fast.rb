@@ -32,4 +32,53 @@ some_random_input = unpredictable_inputs.sample
 p some_random_input
 
 # Write your code below
+require "date"
+randomclass = some_random_input.class
+if randomclass == String
+  p some_random_input.downcase
+elsif randomclass == Time
+  wkday = some_random_input.wday
+  p wkday
+  if wkday == 1 
+    p "monday"
+    if wkday == 2
+      p "tuesday"
+      if wkday == 3 
+        p "wednesday"
+        if wkday == 4
+          p "thursday"
+          if wkday == 5 
+            p "friday"
+            if wkday == 6
+              p "saturday"
+              if wkday == 7
+                p "sunday"
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  
+elsif randomclass == Integer
+  if some_random_input.even?
+    p "#{some_random_input} is even"
+  else
+    p "#{some_random_input} is odd"
+  end
+elsif randomclass == Symbol
+    p some_random_input.downcase
+elsif randomclass == NilClass
+    p "no object provided"
 
+elsif randomclass == TrueClass
+  p "you may pass"
+
+elsif randomclass == FalseClass
+  p "you may not pass"
+
+elsif randomclass == Hash
+  p some_random_input.keys
+
+end
