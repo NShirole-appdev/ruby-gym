@@ -4,3 +4,7 @@
 #   and finally prints, "'the' appeared x times", where x is an Integer
 
 p "Enter a sentence:"
+input = gets.chomp.gsub(",", "").gsub("-", "")
+sentence = input.split()
+p sentence
+p "'the' appeared #{sentence.count("the")} times"
