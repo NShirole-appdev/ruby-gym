@@ -14,3 +14,9 @@
 #  "Number of digits in the string is: 4"
 
 p "Enter a sentence:"
+stringinput = gets.chomp()
+digits = stringinput.gsub(/[^0-9]/, "")
+letters = stringinput.gsub(/[^a-z]/i, "")
+p "Number of letters in the string is: #{letters.length}"
+p "Number of spaces in the string is: #{stringinput.count(" ")}"
+p "Number of digits in the string is: #{digits.length}"
